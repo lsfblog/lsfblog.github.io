@@ -92,10 +92,8 @@ exclude:
 
 
 
-remote_theme: niklasbuschmann/contrast@v2.11
-
-plugins:
-  - jekyll-remote-theme
+# _config.yml
+excerpt_separator: "<!--more-->"
 
 
 

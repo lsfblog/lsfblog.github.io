@@ -3,7 +3,15 @@ layout: default
 ---
 
 <style>
-  .highlight-post:before {
+  .post p {
+    text-align: left; /* 保持所有标题左对齐 */
+  }
+
+  .post-highlight p {
+    display: inline-block; /* 使整个标题作为一个块级元素显示 */
+  }
+
+  .post-highlight:before {
     content: '*';
     font-size: 16px; /* 调整字体大小以匹配标题 */
     color: #1a1a1a; /* 调整颜色以匹配标题颜色 */
@@ -13,23 +21,18 @@ layout: default
     line-height: 1.5; /* 调整行高以垂直居中*号 */
     vertical-align: middle;
   }
-
-  .highlight-post {
-    display: flex;
-    align-items: center;
-  }
 </style>
 
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
       {% if post.title == "测试博客字段" %}
-        <p class="highlight-post" style="color: #1a1a1a; font-weight: normal; font-size: 16px;">
+        <p class="post-highlight" style="color: #1a1a1a; font-weight: normal; font-size: 16px;">
           <span class="star">* </span>
-          <a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a>
+          {{ post.title }}
         </p>
       {% else %}
-        <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a></p>
+        <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;">{{ post.title }}</p>
       {% endif %}
       <!-- 其他代码保持不变 -->
     </article>

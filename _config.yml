@@ -92,11 +92,5 @@ exclude:
 
 
 
-# _config.yml
-excerpt_separator: "<!--more-->"
-
-
-
-
 
 

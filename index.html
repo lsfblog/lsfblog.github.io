@@ -2,24 +2,29 @@
 layout: default
 ---
 
+<style>
+  .highlight-post:before {
+    content: '*';
+    font-size: 16px; /* 调整字体大小以匹配标题 */
+    color: #1a1a1a; /* 调整颜色以匹配标题颜色 */
+    display: inline-block;
+    width: 20px; /* 调整宽度以保持*号与标题的距离 */
+    margin-right: 5px; /* 在*号和标题之间添加一些空间 */
+    line-height: 1.5; /* 调整行高以垂直居中*号 */
+    vertical-align: middle;
+    float: left; /* 使*号浮动在左侧 */
+  }
+</style>
+
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-
-
-      <!-- 使用 p 标签来包裹标题链接，并通过内联样式定义字体颜色 -->
-      <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a></p>
+      {% if post.title == "测试博客字段" %}
+        <p class="highlight-post" style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a></p>
+      {% else %}
+        <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a></p>
       {% endif %}
-
-      <!-- 使用 p 标签来显示日期，并通过内联样式定义字体颜色 -->
-      <!-- <p style="color: #999999; font-weight: normal; font-size: 14px;">{{ post.date | date: "%Y年%m月%d日" }}</p> -->
-
-      <!-- <div class="entry">
-        {{ post.excerpt }}
-      </div> -->
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <!-- 其他代码保持不变 -->
     </article>
   {% endfor %}
 </div>
-

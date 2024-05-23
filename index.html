@@ -3,11 +3,7 @@ layout: default
 ---
 
 <style>
-  .post p {
-    text-align: left; /* 保持所有标题左对齐 */
-  }
-
-  .post-highlight p {
+  .post-highlight a {
     display: inline-block; /* 使整个标题作为一个块级元素显示 */
   }
 
@@ -20,19 +16,21 @@ layout: default
     margin-right: 5px; /* 在*号和标题之间添加一些空间 */
     line-height: 1.5; /* 调整行高以垂直居中*号 */
     vertical-align: middle;
+    float: left; /* 使*号浮动在左侧 */
+    margin-left: -1.5rem; /* 使用提供的类来移动元素 */
   }
 </style>
 
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-      {% if post.title == "在日期后面加上中文的博客名" %}
-        <p class="post-highlight" style="color: #1a1a1a; font-weight: normal; font-size: 16px;">
+      {% if post.title == "测试博客字段" %}
+        <a class="post-highlight" href="{{ site.baseurl }}{{ post.url }}">
           <span class="star">* </span>
           {{ post.title }}
-        </p>
+        </a>
       {% else %}
-        <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;">{{ post.title }}</p>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       {% endif %}
       <!-- 其他代码保持不变 -->
     </article>

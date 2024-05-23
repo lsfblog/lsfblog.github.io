@@ -280,11 +280,20 @@ nav {
 }
 
 footer {
+ padding: 20px 0; /* 填充上下20px */
+  text-align: center; /* 字段居中 */
+  background-color: #333; /* 背景色 */
+  position: relative; /* 设置为相对定位 */
+  bottom: 0; /* 模块置底 */
+  width: 100%; /* 背景色铺满整个页脚 */
+  background-color: #000
+  color: #fff
 	
-  position: fixed;
+ /* position: fixed;
   bottom: 0;
   padding: 20px 0;
   text-align: center;
+  weight:100% */
 
 }
 

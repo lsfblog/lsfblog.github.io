@@ -1,3 +1,5 @@
+
+
 ---
 layout: default
 ---
@@ -8,10 +10,14 @@ layout: default
 
 
       <!-- 使用 p 标签来包裹标题链接，并通过内联样式定义字体颜色 -->
-      <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a></p>
+      {% if post.title == "2022-05-22-测试博客字段.md" %}
+        <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">* {{ post.title }}</a></p>
+      {% else %}
+        <p style="color: #1a1a1a; font-weight: normal; font-size: 16px;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: inherit;">{{ post.title }}</a></p>
+      {% endif %}
 
       <!-- 使用 p 标签来显示日期，并通过内联样式定义字体颜色 -->
-     <!--    <p style="color: #999999; font-weight: normal; font-size: 14px;">{{ post.date | date: "%Y年%m月%d日" }}</p> -->
+      <!-- <p style="color: #999999; font-weight: normal; font-size: 14px;">{{ post.date | date: "%Y年%m月%d日" }}</p> -->
 
       <!-- <div class="entry">
         {{ post.excerpt }}

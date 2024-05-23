@@ -249,7 +249,8 @@ nav {
 
 .posts > .post {
   padding-bottom: 0em;
-  border-bottom: 1px solid $lightGray;
+  // 底部描边注释掉
+  //border-bottom: 1px solid $lightGray;
 }
 
 .posts > .post:last-child {

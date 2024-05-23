@@ -6,8 +6,10 @@ layout: default
   <h3>{{ page.title }}</h3>
 
   <div class="entry">
-    <!-- {{ content }}  源代码 --> 
-    <p>{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}</p>
+    
+    <p>{{ page.date | date: "%Y-%m-%d }}</p>
+    {{ content }}   
+  
   </div>
 
   <div class="date">

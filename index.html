@@ -29,15 +29,14 @@ layout: default
   }
 </style>
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
 
 
 <div class="posts">
-  <div class="post-divider"></div> <!-- 添加一个空的模块来分隔文章和标题区域 -->
+  <div class="post-divider"></div>
   {% for post in site.posts %}
     <article class="post">
-      {% if post.title == "测试博客字段" %}
+      {% if post.starred %}
         <a class="post-highlight" href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
@@ -47,4 +46,8 @@ layout: default
       <!-- 其他代码保持不变 -->
     </article>
   {% endfor %}
+</div>
+
+
+  
 </div>

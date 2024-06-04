@@ -1,15 +1,20 @@
 ---
 layout: page
-title: About
+title: 简介
 permalink: /about/
 ---
 
-Some information about you!
+我出生于1994年，毕业于湖北科技学院艺术学院油画专业。
 
-### More Information
+油画没学到啥，艺术眼界长不少，俗称“眼高手低”。
 
-A place to include any other types of information that you'd like to include about yourself.
+2016年考研没上岸。
 
-### Contact me
+2017年从事UI设计至今。
 
-[email@domain.com](mailto:email@domain.com)
+三大爱好：家庭、读书、游戏；家庭需要运营，读书需要积累，游戏需要朋友。
+
+曾经每日写日记，如今很少发票圈。
+
+如有同道，可以邮件：466966871@qq.com
+
